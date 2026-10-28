@@ -1,31 +1,26 @@
-# Project artwork
+# Project visuals
 
-Created on 28 October 2026 using the built-in ImageGen tool. These are original concept illustrations, not screenshots of the applications. The generated PNGs were encoded to WebP for delivery without changing their composition.
+Updated on 28 October 2026. Three project covers use real interface captures arranged in native HTML/CSS frames. The Abyss Wars concept render is retained unchanged.
 
-## mudra
+## Mudra / Vajra
 
-Asset: `public/images/mudra.webp` (1536 × 1024)
+Asset: `public/images/product/mudra-runtime.png` (1600 × 1050).
 
-Prompt:
+Source: a recorded Mudra PTY/VT100 session displaying a completed demonstration graph: density and volume → mass → force → work. The original terminal cells were rendered again using the existing capture renderer. Only the local project-path header was replaced with `demo/physics`; the computation graph was preserved. No model inference or task execution was repeated. This is a recorded interface capture, not a product mockup.
 
-Use case: stylized-concept. Asset type: flagship project illustration for a serious AI engineer's portfolio, one landscape 3:2 image, premium photoreal CGI, no text.
-Create a breathtaking tangible KNOWLEDGE ENGINE: a suspended, partially exploded precision instrument whose central translucent smoky quartz polyhedron contains a dense branching luminous neural lattice. Six concentric broken rings of dark brushed titanium, fine machined joints, polished bevels, small ivory ceramic modules and emerald glass components float at deliberately different depths around it. Threads of pale chartreuse light physically bridge the separated components; clear causal structure, not random spaghetti. It should look like an extraordinary museum object built by an obsessive Swiss instrument maker, rendered in Cinema4D/Octane with optical realism. Macro-scale material detail, restrained mint and pale-chartreuse highlights, graphite and deep olive-black environment, soft dramatic studio key light from upper left, tangible shadows, atmospheric depth. Strong asymmetrical 3/4 perspective, subject fills around75% of image, dramatic close framing but comfortable margins. Beautifully composed as a full-bleed artwork. Palette background #141613, titanium silver, smoky glass, bone white, acid chartreuse accent; high subject/background separation. This represents Mudra/Vajra agent tools and persistent knowledge, not a literal product screenshot. Avoid text, lettering, logos, UI, screen mockups, flat wireframe diagrams, simplistic spheres, cartoon style, rainbow neon, cheap sci-fi, excessive bloom, sterile centered icon composition.
+## Worklife
 
-## worklife
+Asset: `public/images/product/worklife-jobs.webp` (1440 × 1080).
 
-Asset: `public/images/worklife.webp` (1536 × 1024)
+Source: the real Worklife interface capture already used by its public website, `frontend/src/site-assets/worklife-jobs.png`. Its visible demonstration banner and source README identify a separate fictional database. Vacancies and messages are illustrative; no personal search records or real employer correspondence are included. The capture was encoded to WebP without changing the interface.
 
-Prompt:
+## Pholiant / Book of Shadow
 
-Use case: stylized-concept. Asset type: one landscape 3:2 premium project cover image for a serious engineer's portfolio. Render an astonishing ARCHITECTURAL PATHFINDING SCULPTURE: a physical miniature landscape of interconnected angular bridges, ascending steps, monumental frosted glass doorways and slim polished titanium frames, floating at different heights above a dark polished basalt plinth. One continuous pale chartreuse fiber-optic path winds through selected doorways, clearly showing a purposeful route through many possibilities. Other branches recede into soft darkness. This visual metaphor is about a personal AI career agent finding a path through opportunities; no people, no actual UI. Asymmetrical 3/4 isometric camera close to the table, sophisticated large-scale architectural model, spatial depth and strong foreground/background layers. Beautiful tactile realism: etched smoky glass, milky translucent glass edges, brushed silver aluminum, dark graphite stone, restrained warm bone highlights. Background deep olive-black #141613, focused warm studio lighting and mint/chartreuse signal route, soft shadows, realistic reflections and depth of field. Premium CGI for an architectural magazine, sculptural and memorable, plausible intricate construction, use full image with comfortable edges. No text, letters, logos, wireframe diagrams, screen mockups, cartoon, rainbow neon, excessive bloom, office stock photos. No clumsy maze viewed from straight above.
+Assets: `public/images/product/book-spells.jpg` and `public/images/product/book-skills.jpg` (430 × 932 each).
 
-## magik
+Source: native browser captures of the real Mini App in its existing mock-data preview. The screens show the greeting spell carousel and the Rituals progression list. No authenticated production account or live player records were used. The development-tool badge was hidden for the captures. The two phone frames are HTML/CSS presentation, not changes to the product interface.
 
-Asset: `public/images/magik.webp` (1536 × 1024)
-
-Prompt:
-
-Use case: stylized-concept. Asset type: one landscape 3:2 cinematic project cover for Book of Shadow, an interactive grimoire/Telegram game built by a software engineer. A magnificent physical dark forest-green leather grimoire suspended half-open above a slate worktable in a shadowy archive. Huge tactile detail: weathered leather grain, small sculpted brass corners and spine fittings, thick deckled ivory parchment pages bending naturally, fine engraved brass clasp. Above the open pages floats one restrained circular instrument of aged brass, fine geometric intersections and translucent smoky glass, emitting pale chartreuse light that illuminates nearby parchment, as if an ancient book had become an interactive system. No readable writing, only subtle original geometric linework on parchment. Dramatic three-quarter close-up camera, strong diagonal composition, actual thickness of book and sculptural depth, balanced negative space, focused rich texture, mature and sophisticated museum artifact photography with physically realistic CGI. Graphite, warm bone, antique brass, deep olive, muted pale chartreuse; dark background #141613, warm hard key light and soft volumetric shadows. Book fills around75% of image; beautiful polished art direction, not generic fantasy poster. No skulls, bats, witches, characters, glowing purple magic smoke, excessive particles, runic gibberish, letters, logos, typography, UI or picture frames.
+Public project website: <https://pholiant.space/>.
 
 ## abyss
 

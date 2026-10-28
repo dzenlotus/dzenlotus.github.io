@@ -61,12 +61,6 @@ const copy = {
     principle1: "Ideas need<br><strong>working proof.</strong>",
     principle2: "Complex systems.<br><strong>Clear interfaces.</strong>",
     principle3: "Stay curious.<br><strong>Keep building.</strong>",
-    labTitle: "A little controlled<br><em>chaos.</em>",
-    labIntro:
-      "An interactive study in gravity and control. Pilot a probe through three signals. The pull of the central mass changes your trajectory.",
-    launch: "Launch a probe",
-    labControls: "ARROWS / WASD · THREE SIGNALS",
-    reset: "Reset ↺",
     agentEyebrow: "A NOTE FROM THE OTHER SIDE OF THE KEYBOARD",
     agentNote:
       "“Ivan doesn’t stop at ‘what if’. He asks what it would take, builds it, and makes me prove it works. This little universe is how I see that mind.”",
@@ -82,9 +76,11 @@ const copy = {
     questLabel: "EXPLORATION INDEX",
     questTitle: "Stay curious.",
     questIntro:
-      "Five ways to explore the work. No locked content, no scores — just things worth trying.",
+      "Four ways to explore the work. No locked content, no scores — just things worth trying.",
     readCase: "Explore the project",
     conceptStudy: "CONCEPT STUDY",
+    demoInterface: "DEMO INTERFACE",
+    runtimeCapture: "RUNTIME CAPTURE",
     approach: "ENGINEERING FOCUS",
     contribution: "MY CONTRIBUTION",
     viewSource: "Public repository ↗",
@@ -92,25 +88,20 @@ const copy = {
     preview: "Download preview ↗",
     profile: "Quick profile ↗",
     noteFound: "Field note added",
-    labDone: "Trajectory complete. Three signals collected.",
     questNames: [
       "Explore the 3D instrument",
       "Switch between all three systems",
       "Open a project study",
       "Read the engineering perspective",
-      "Complete the gravity experiment",
     ],
     reward:
-      "All five observations recorded. The interesting part was always the exploration.",
+      "All four observations recorded. The interesting part was always the exploration.",
     contactEmail: "Email ↗",
     availability: "ENGINEERING ROLES & COLLABORATIONS",
     commandPlaceholder: "Find a project or jump somewhere…",
-    signals: "SIGNALS",
     sections: "SECTION",
     project: "PROJECT",
     noResults: "No matching results.",
-    labWin: "Experiment complete",
-    labReplay: "Run again",
     professional: "Professional profile",
     projectSelect: "Select a project to inspect",
     soundOn: "Interaction sounds enabled",
@@ -151,12 +142,6 @@ const copy = {
     principle1: "Идеям нужно<br><strong>рабочее доказательство.</strong>",
     principle2: "Сложные системы.<br><strong>Понятные интерфейсы.</strong>",
     principle3: "Исследовать.<br><strong>Продолжать создавать.</strong>",
-    labTitle: "Немного управляемого<br><em>хаоса.</em>",
-    labIntro:
-      "Интерактивный этюд о гравитации и управлении. Проведите зонд через три сигнала. Притяжение центральной массы меняет траекторию.",
-    launch: "Запустить зонд",
-    labControls: "СТРЕЛКИ / WASD · ТРИ СИГНАЛА",
-    reset: "Сначала ↺",
     agentEyebrow: "ЗАМЕТКА С ДРУГОЙ СТОРОНЫ КЛАВИАТУРЫ",
     agentNote:
       "«Иван не останавливается на „а что, если“. Он выясняет, что потребуется, собирает это и заставляет меня доказать, что оно работает. Эта маленькая вселенная — мой взгляд на его мышление».",
@@ -172,9 +157,11 @@ const copy = {
     questLabel: "ИНДЕКС ИССЛЕДОВАНИЯ",
     questTitle: "Сохранять любопытство.",
     questIntro:
-      "Пять способов познакомиться с работой. Всё доступно сразу: просто несколько вещей, которые стоит попробовать.",
+      "Четыре способа познакомиться с работой. Всё доступно сразу: просто несколько вещей, которые стоит попробовать.",
     readCase: "Подробнее о проекте",
     conceptStudy: "КОНЦЕПТ",
+    demoInterface: "ДЕМО-ИНТЕРФЕЙС",
+    runtimeCapture: "ЗАХВАТ ИНТЕРФЕЙСА",
     approach: "ИНЖЕНЕРНЫЙ ФОКУС",
     contribution: "МОЙ ВКЛАД",
     viewSource: "Открытый репозиторий ↗",
@@ -182,25 +169,20 @@ const copy = {
     preview: "Скачать preview ↗",
     profile: "Короткий профиль ↗",
     noteFound: "Наблюдение записано",
-    labDone: "Траектория пройдена. Три сигнала собраны.",
     questNames: [
       "Исследовать 3D-механизм",
       "Переключить все три системы",
       "Изучить проект",
       "Прочитать об инженерном подходе",
-      "Завершить гравитационный эксперимент",
     ],
     reward:
-      "Все пять наблюдений записаны. Главное здесь — сам процесс исследования.",
+      "Все четыре наблюдения записаны. Главное здесь — сам процесс исследования.",
     contactEmail: "Написать ↗",
     availability: "ИНЖЕНЕРНЫЕ РОЛИ И СОТРУДНИЧЕСТВО",
     commandPlaceholder: "Найти проект или раздел…",
-    signals: "СИГНАЛЫ",
     sections: "РАЗДЕЛ",
     project: "ПРОЕКТ",
     noResults: "Ничего не найдено.",
-    labWin: "Эксперимент завершён",
-    labReplay: "Запустить снова",
     professional: "Профессиональный профиль",
     projectSelect: "Выберите проект",
     soundOn: "Звук взаимодействий включён",
@@ -219,7 +201,7 @@ const projects = [
     preview: "https://github.com/dzenlotus/mudra/releases",
     en: {
       imageAlt:
-        "A precision engine with titanium rings around a smoky quartz core and a luminous branching lattice.",
+        "A sanitized capture of the running Mudra terminal interface, shown in a desktop window.",
       subtitle: "Intelligence with a memory.",
       description:
         "An agent harness and knowledge-engine ecosystem exploring how software can formalize goals, keep reusable knowledge and execute procedures.",
@@ -233,7 +215,7 @@ const projects = [
     },
     ru: {
       imageAlt:
-        "Точный механизм: титановые кольца вокруг ядра из дымчатого кварца со светящейся разветвлённой структурой.",
+        "Обезличенный захват работающего терминального интерфейса Mudra в окне приложения.",
       subtitle: "Интеллект с памятью.",
       description:
         "Агентная среда и экосистема движка знаний: формализация целей, накопление пригодного для повторного использования опыта и выполнение процедур.",
@@ -255,7 +237,7 @@ const projects = [
     website: "https://dzenlotus.github.io/worklife-agent/",
     en: {
       imageAlt:
-        "Branching architectural walkways and frosted glass portals, connected by a single chartreuse route in a dark gallery.",
+        "The actual Worklife demo interface showing sample vacancies, match explanations and application statuses.",
       subtitle: "A career workspace for personal agents.",
       description:
         "An MCP server for job search, resume matching, application tracking and shared employer knowledge. Personal search context stays local.",
@@ -269,7 +251,7 @@ const projects = [
     },
     ru: {
       imageAlt:
-        "Разветвлённые переходы и порталы из матового стекла; один салатовый маршрут проходит через тёмную галерею.",
+        "Демонстрационный интерфейс Worklife: примеры вакансий, пояснения соответствия и статусы откликов.",
       subtitle: "Карьерное пространство для личных агентов.",
       description:
         "MCP-сервер для поиска вакансий, сопоставления резюме, ведения откликов и обмена знаниями о работодателях. Личный контекст остаётся локально.",
@@ -285,11 +267,13 @@ const projects = [
   {
     id: "magik",
     name: "Book of Shadow",
+    website: "https://pholiant.space/",
     category: "INTERACTIVE PRODUCT",
     tags: ["Python", "Next.js", "React", "Telegram"],
     en: {
       imageAlt:
-        "A dark leather grimoire with brass fittings, open parchment pages and a floating geometric seal.",
+        "The spells screen from the Book of Shadow Mini App, captured locally with demo data.",
+      secondaryImageAlt: "The skills screen from the Book of Shadow Mini App, captured locally with demo data.",
       subtitle: "A spell book that lives in your chat.",
       description:
         "A Telegram game and companion Mini App that turn spells, rituals and progression into a shared interactive world.",
@@ -299,11 +283,12 @@ const projects = [
       contribution:
         "Backend mechanics, Telegram workflows, frontend interactions and iterative product development.",
       status:
-        "A continuing product with a private codebase. This overview describes engineering scope; no public demo is linked.",
+        "Public website and Telegram Mini App. The codebase is private; these interface captures use demo data.",
     },
     ru: {
       imageAlt:
-        "Гримуар в тёмной кожаной обложке с латунными деталями, раскрытым пергаментом и парящей геометрической печатью.",
+        "Экран заклинаний Mini App Book of Shadow, снятый локально с демонстрационными данными.",
+      secondaryImageAlt: "Экран развития Mini App Book of Shadow, снятый локально с демонстрационными данными.",
       subtitle: "Книга заклинаний, живущая в чате.",
       description:
         "Игра в Telegram и Mini App, объединяющие заклинания, ритуалы и развитие персонажей в общий интерактивный мир.",
@@ -313,7 +298,7 @@ const projects = [
       contribution:
         "Серверные механики, Telegram-сценарии, интерфейс и последовательное развитие продукта.",
       status:
-        "Развивающийся продукт с закрытой кодовой базой. Здесь описана инженерная часть; публичная демоверсия не указана.",
+        "Публичный сайт и Telegram Mini App. Кодовая база закрыта; на снимках интерфейса использованы демонстрационные данные.",
     },
   },
   {
@@ -388,11 +373,21 @@ function bindProjectDepth() {
     el.addEventListener("pointercancel", () => resetProjectDepth(el));
   });
 }
+function projectVisual(p) {
+  if (p.id === "abyss")
+    return `<img class="project-image" src="/images/${p.id}.webp" width="1536" height="1024" alt="${p[lang].imageAlt}" loading="lazy" decoding="async" draggable="false">`;
+  const capture = (file, width, height, alt) =>
+    `<img class="product-capture" src="/images/product/${file}" width="${width}" height="${height}" alt="${alt}" loading="lazy" decoding="async" draggable="false">`;
+  if (p.id === "magik")
+    return `<span class="product-stage product-stage--phones"><span class="product-phone product-phone--spells">${capture("book-spells.jpg", 430, 932, p[lang].imageAlt)}</span><span class="product-phone product-phone--skills">${capture("book-skills.jpg", 430, 932, p[lang].secondaryImageAlt)}</span></span>`;
+  const terminal = p.id === "mudra";
+  return `<span class="product-stage"><span class="product-window product-window--${terminal ? "terminal" : "browser"}"><span class="product-window-chrome" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>${terminal ? "mudra" : "Worklife"}</span><span class="window-chrome-spacer"></span></span>${terminal ? capture("mudra-runtime.png", 1600, 1050, p[lang].imageAlt) : capture("worklife-jobs.webp", 1440, 1080, p[lang].imageAlt)}</span></span>`;
+}
 function renderProjects() {
   $("#projects").innerHTML = projects
     .map(
       (p, i) =>
-        `<article class="project reveal" id="project-${p.id}"><button class="project-visual" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}"><img class="project-image" src="/images/${p.id}.webp" width="1536" height="1024" alt="${p[lang].imageAlt}" loading="lazy" decoding="async" draggable="false"><span class="visual-corner">${copy[lang].conceptStudy} / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
+        `<article class="project reveal" id="project-${p.id}"><button class="project-visual${p.id === "abyss" ? "" : ` project-product project-product--${p.id}`}" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}">${projectVisual(p)}<span class="visual-corner">${copy[lang][p.id === "abyss" ? "conceptStudy" : p.id === "mudra" ? "runtimeCapture" : "demoInterface"]} / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
     )
     .join("");
   $$("[data-project]").forEach((el) =>
@@ -412,7 +407,6 @@ function setLanguage() {
   renderProjects();
   renderQuests();
   renderCommands();
-  updateLabScore();
   localizeControls();
   if ($("#project-dialog").open) renderProject(currentProject);
 }
@@ -469,11 +463,11 @@ function discover(key) {
   completed.add(key);
   renderQuests();
   tone(440 + completed.size * 80);
-  notify(`${copy[lang].noteFound} · ${completed.size}/5`);
+  notify(`${copy[lang].noteFound} · ${completed.size}/${copy[lang].questNames.length}`);
 }
 function renderQuests() {
-  $("#quest-count").textContent = `${completed.size}/5`;
-  $(".quest-progress i").style.width = `${completed.size * 20}%`;
+  $("#quest-count").textContent = `${completed.size}/${copy[lang].questNames.length}`;
+  $(".quest-progress i").style.width = `${(completed.size / copy[lang].questNames.length) * 100}%`;
   $("#quest-list").innerHTML = copy[lang].questNames
     .map(
       (q, i) =>
@@ -481,7 +475,7 @@ function renderQuests() {
     )
     .join("");
   $("#quest-reward").textContent =
-    completed.size === 5 ? copy[lang].reward : "";
+    completed.size === copy[lang].questNames.length ? copy[lang].reward : "";
 }
 let currentProject = "mudra";
 function renderProject(id) {
@@ -554,7 +548,6 @@ function applyMotion() {
     resetProjectDepths();
     $$(".reveal").forEach((el) => el.classList.add("visible"));
   }
-  if (!paused && labRunning) startLabLoop();
 }
 $("#motion").addEventListener("click", () => {
   paused = !paused;
@@ -586,11 +579,6 @@ function commandEntries() {
     {
       label: copy[lang].navAbout,
       action: () => jump("about"),
-      type: copy[lang].sections,
-    },
-    {
-      label: "Gravity sandbox",
-      action: () => jump("lab"),
       type: copy[lang].sections,
     },
     {
@@ -662,265 +650,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// This small physics study uses fixed simulation steps, independent of display refresh rate.
-const canvas = $("#gravity"),
-  ctx = canvas.getContext("2d");
-let labRunning = false,
-  labVisible = false,
-  labFrame = 0,
-  lastTime = 0,
-  accumulator = 0,
-  signalCount = 0;
-const keys = new Set();
-let probe,
-  trail = [],
-  signals = [];
-function resetLab() {
-  probe = { x: 0.2, y: 0.68, vx: 0.05, vy: -0.1 };
-  trail = [];
-  signals = [
-    { x: 0.74, y: 0.25, found: false },
-    { x: 0.79, y: 0.74, found: false },
-    { x: 0.27, y: 0.24, found: false },
-  ];
-  signalCount = 0;
-  updateLabScore();
-  drawLab();
-}
-function updateLabScore() {
-  $("#lab-score").textContent = `${copy[lang].signals} ${signalCount} / 3`;
-}
-function drawLab() {
-  if (!ctx || !probe) return;
-  const w = canvas.width,
-    h = canvas.height;
-  ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#191d16";
-  ctx.fillRect(0, 0, w, h);
-  ctx.strokeStyle = "#9aaf7712";
-  ctx.lineWidth = 1;
-  for (let x = 0; x < w; x += 30) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, h);
-    ctx.stroke();
-  }
-  for (let y = 0; y < h; y += 30) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(w, y);
-    ctx.stroke();
-  }
-  ctx.strokeStyle = "#a0b57d20";
-  [0.14, 0.25, 0.38].forEach((r) => {
-    ctx.beginPath();
-    ctx.ellipse(w / 2, h / 2, w * r, h * r, 0, 0, Math.PI * 2);
-    ctx.stroke();
-  });
-  const glow = ctx.createRadialGradient(
-    w / 2,
-    h / 2,
-    0,
-    w / 2,
-    h / 2,
-    h * 0.25,
-  );
-  glow.addColorStop(0, "#a0d75b30");
-  glow.addColorStop(1, "#a0d75b00");
-  ctx.fillStyle = glow;
-  ctx.fillRect(0, 0, w, h);
-  ctx.beginPath();
-  ctx.arc(w / 2, h / 2, 12, 0, Math.PI * 2);
-  ctx.fillStyle = "#9aba69";
-  ctx.fill();
-  ctx.strokeStyle = "#d7ff75";
-  signals.forEach((s, i) => {
-    if (s.found) return;
-    ctx.save();
-    ctx.translate(s.x * w, s.y * h);
-    ctx.rotate(Math.PI / 4);
-    ctx.strokeRect(-7, -7, 14, 14);
-    ctx.restore();
-    ctx.fillStyle = "#8d9e79";
-    ctx.font = "9px monospace";
-    ctx.fillText(`0${i + 1}`, s.x * w + 14, s.y * h + 3);
-  });
-  if (trail.length > 1) {
-    ctx.beginPath();
-    trail.forEach((p, i) =>
-      i ? ctx.lineTo(p.x * w, p.y * h) : ctx.moveTo(p.x * w, p.y * h),
-    );
-    ctx.strokeStyle = "#c0e38666";
-    ctx.stroke();
-  }
-  ctx.save();
-  ctx.translate(probe.x * w, probe.y * h);
-  ctx.rotate(Math.atan2(probe.vy * h, probe.vx * w));
-  ctx.beginPath();
-  ctx.moveTo(9, 0);
-  ctx.lineTo(-6, -4);
-  ctx.lineTo(-3, 0);
-  ctx.lineTo(-6, 4);
-  ctx.closePath();
-  ctx.fillStyle = "#e6ffb3";
-  ctx.fill();
-  ctx.restore();
-}
-function physicsStep(dt) {
-  const dx = 0.5 - probe.x,
-    dy = 0.5 - probe.y,
-    r2 = dx * dx + dy * dy + 0.035;
-  const gravity = 0.018 / Math.pow(r2, 1.5);
-  probe.vx += dx * gravity * dt;
-  probe.vy += dy * gravity * dt;
-  const thrust = 0.7 * dt;
-  if (keys.has("left")) probe.vx -= thrust;
-  if (keys.has("right")) probe.vx += thrust;
-  if (keys.has("up")) probe.vy -= thrust;
-  if (keys.has("down")) probe.vy += thrust;
-  const speed = Math.hypot(probe.vx, probe.vy);
-  if (speed > 0.45) {
-    probe.vx *= 0.45 / speed;
-    probe.vy *= 0.45 / speed;
-  }
-  probe.x += probe.vx * dt;
-  probe.y += probe.vy * dt;
-  if (probe.x < 0.025 || probe.x > 0.975) {
-    probe.x = Math.max(0.025, Math.min(0.975, probe.x));
-    probe.vx *= -0.7;
-  }
-  if (probe.y < 0.035 || probe.y > 0.965) {
-    probe.y = Math.max(0.035, Math.min(0.965, probe.y));
-    probe.vy *= -0.7;
-  }
-  trail.push({ x: probe.x, y: probe.y });
-  if (trail.length > 230) trail.shift();
-  for (const s of signals) {
-    if (
-      !s.found &&
-      Math.hypot(
-        (s.x - probe.x) * canvas.width,
-        (s.y - probe.y) * canvas.height,
-      ) < 24
-    ) {
-      s.found = true;
-      signalCount++;
-      updateLabScore();
-      tone(700 + signalCount * 100);
-      if (signalCount === 3) {
-        labRunning = false;
-        discover(4);
-        notify(copy[lang].labDone);
-        $("#lab-start").innerHTML =
-          `<span class="overline">${copy[lang].labWin}</span><button class="button primary" id="relaunch">${copy[lang].labReplay} ↗</button>`;
-        $("#lab-start").classList.remove("hidden");
-        $("#relaunch").addEventListener("click", launchLab);
-      }
-    }
-  }
-}
-function labTick(now) {
-  labFrame = 0;
-  if (!labRunning || paused || !labVisible || document.hidden) return;
-  const dt = Math.min((now - lastTime) / 1000, 0.05);
-  lastTime = now;
-  accumulator += dt;
-  while (accumulator >= 1 / 60) {
-    physicsStep(1 / 60);
-    accumulator -= 1 / 60;
-  }
-  drawLab();
-  if (labRunning) labFrame = requestAnimationFrame(labTick);
-}
-function startLabLoop() {
-  if (labFrame || !labRunning || paused || !labVisible || document.hidden)
-    return;
-  lastTime = performance.now();
-  accumulator = 0;
-  labFrame = requestAnimationFrame(labTick);
-}
-function launchLab() {
-  resetLab();
-  labRunning = true;
-  $("#lab-start").classList.add("hidden");
-  if (paused) {
-    paused = false;
-    applyMotion();
-  }
-  canvas.tabIndex = 0;
-  canvas.focus({ preventScroll: true });
-  startLabLoop();
-}
-$("#launch").addEventListener("click", launchLab);
-$("#reset-lab").addEventListener("click", () => {
-  if (!labRunning) {
-    launchLab();
-  } else {
-    resetLab();
-    startLabLoop();
-  }
-});
-const directionMap = {
-  ArrowLeft: "left",
-  a: "left",
-  ArrowRight: "right",
-  d: "right",
-  ArrowUp: "up",
-  w: "up",
-  ArrowDown: "down",
-  s: "down",
-};
-document.addEventListener("keydown", (e) => {
-  if (
-    labRunning &&
-    labVisible &&
-    !$("dialog[open]") &&
-    (document.activeElement === canvas ||
-      $(".touch-controls").contains(document.activeElement))
-  ) {
-    const dir = directionMap[e.key];
-    if (dir) {
-      e.preventDefault();
-      keys.add(dir);
-    }
-  }
-});
-document.addEventListener("keyup", (e) => {
-  keys.delete(directionMap[e.key]);
-});
-window.addEventListener("blur", () => keys.clear());
-$$("[data-direction]").forEach((btn) => {
-  btn.addEventListener("pointerdown", (e) => {
-    if (!labRunning) return;
-    e.preventDefault();
-    btn.setPointerCapture(e.pointerId);
-    keys.add(btn.dataset.direction);
-  });
-  ["pointerup", "pointercancel", "lostpointercapture"].forEach((evt) =>
-    btn.addEventListener(evt, () => keys.delete(btn.dataset.direction)),
-  );
-});
-new IntersectionObserver(
-  (es) =>
-    es.forEach((e) => {
-      labVisible = e.isIntersecting;
-      if (labVisible) startLabLoop();
-      else keys.clear();
-    }),
-  { threshold: 0.15 },
-).observe(canvas);
-document.addEventListener("visibilitychange", () => {
-  keys.clear();
-  if (!document.hidden) startLabLoop();
-});
-const canvasResize = new ResizeObserver(() => {
-  const r = canvas.getBoundingClientRect();
-  canvas.width = Math.round(r.width * Math.min(devicePixelRatio, 1.5));
-  canvas.height = Math.round(r.height * Math.min(devicePixelRatio, 1.5));
-  drawLab();
-});
-canvasResize.observe(canvas);
-
 // A fast route for a hiring reader, without replacing the exploratory page.
 $(".brand-sub").textContent = "AI SYSTEMS & FULL-STACK";
 $(".hero-copy").insertAdjacentHTML(
@@ -949,12 +678,8 @@ function localizeControls() {
       ru ? "02 / ЧЕЛОВЕК В СИСТЕМЕ" : "02 / THE HUMAN IN THE LOOP",
     ],
     [
-      "#lab .section-number",
-      ru ? "03 / НЕБОЛЬШОЙ ЭКСПЕРИМЕНТ" : "03 / A SMALL EXPERIMENT",
-    ],
-    [
       "#contact .section-number",
-      ru ? "04 / СЛЕДУЮЩАЯ ГЛАВА" : "04 / NEXT CHAPTER",
+      ru ? "03 / СЛЕДУЮЩАЯ ГЛАВА" : "03 / NEXT CHAPTER",
     ],
   ];
   for (const [selector, text] of labels) $(selector).textContent = text;
@@ -972,32 +697,11 @@ function localizeControls() {
       "#command-input",
       ru ? "Поиск проекта или раздела" : "Find a project or section",
     ],
-    [
-      "#gravity",
-      ru
-        ? "Гравитационный эксперимент: управляйте зондом стрелками или WASD и соберите три сигнала"
-        : "Gravity sandbox: steer a probe with arrows or WASD and collect three signals",
-    ],
   ];
   for (const [selector, text] of arias)
     $(selector).setAttribute("aria-label", text);
   $$(".dialog-close").forEach((b) =>
     b.setAttribute("aria-label", ru ? "Закрыть окно" : "Close dialog"),
-  );
-  $$(".touch-controls button").forEach((b) =>
-    b.setAttribute(
-      "aria-label",
-      {
-        left: ru ? "Тяга влево" : "Steer left",
-        right: ru ? "Тяга вправо" : "Steer right",
-        up: ru ? "Тяга вверх" : "Steer up",
-        down: ru ? "Тяга вниз" : "Steer down",
-      }[b.dataset.direction],
-    ),
-  );
-  $(".touch-controls").setAttribute(
-    "aria-label",
-    ru ? "Направление тяги" : "Probe direction",
   );
   const artifact = $("#world canvas");
   if (artifact)
@@ -1029,7 +733,6 @@ function localizeControls() {
   );
 }
 setLanguage();
-resetLab();
 applyMotion();
 import("./scene.js")
   .then(async ({ createScene }) => {
