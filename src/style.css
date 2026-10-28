@@ -69,6 +69,13 @@ a {
 svg {
   display: block;
 }
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  flex: none;
+}
 em {
   font-family: "Instrument Serif", Georgia, serif;
   font-weight: 400;
@@ -166,7 +173,7 @@ em {
   background: transparent;
   color: var(--muted);
   border: 0;
-  width: 58px;
+  width: 96px;
   font-size: 11px;
   cursor: pointer;
 }
@@ -354,7 +361,7 @@ h1 em {
 }
 .scene-caption {
   position: absolute;
-  bottom: 9%;
+  bottom: 5%;
   right: 9%;
   left: 25%;
   display: flex;
@@ -429,6 +436,7 @@ h1 em {
 .hero-index {
   font-size: 9px;
   color: var(--muted);
+  visibility: hidden;
 }
 .marquee {
   border-top: 1px solid var(--line);
@@ -639,12 +647,17 @@ h2 {
   border: 1px solid #a9b7bf55;
   border-radius: 7px;
   background: #12181d;
-  box-shadow: 1px 1px 0 #070b0f, 3px 4px 0 #080e14, 15px 25px 55px #0008;
+  box-shadow:
+    1px 1px 0 #070b0f,
+    3px 4px 0 #080e14,
+    15px 25px 55px #0008;
 }
 .product-window--terminal {
   width: 79%;
   border-color: #9aa89a44;
-  box-shadow: 0 1px 0 #b5c0b322, 0 20px 60px #0009;
+  box-shadow:
+    0 1px 0 #b5c0b322,
+    0 20px 60px #0009;
 }
 .product-window--browser {
   width: 76%;
@@ -704,8 +717,17 @@ h2 {
   overflow: hidden;
   border: 1px solid #9eaaa066;
   border-radius: 20px;
-  background: linear-gradient(130deg, #70796f, #161d18 18%, #090e0b 75%, #46564b);
-  box-shadow: 1px 0 0 #a5b2a344, 4px 6px 0 #060c08, 12px 22px 35px #0009;
+  background: linear-gradient(
+    130deg,
+    #70796f,
+    #161d18 18%,
+    #090e0b 75%,
+    #46564b
+  );
+  box-shadow:
+    1px 0 0 #a5b2a344,
+    4px 6px 0 #060c08,
+    12px 22px 35px #0009;
 }
 .product-phone .product-capture {
   border-radius: 15px;
@@ -721,35 +743,15 @@ h2 {
     transform: none;
   }
   html:not(.motion-paused) .project-product .product-stage {
-    transform: translate(calc(var(--pointer-x, 0) * -0.7%), calc(var(--pointer-y, 0) * -0.7%));
+    transform: translate(
+      calc(var(--pointer-x, 0) * -0.7%),
+      calc(var(--pointer-y, 0) * -0.7%)
+    );
   }
   html:not(.motion-paused) .project-product:hover::after {
     opacity: 0.2;
   }
 }
-@media (max-width: 720px) {
-  .project-product .visual-corner {
-    top: 12px;
-    left: 12px;
-    font-size: 6px;
-    letter-spacing: 0.1em;
-  }
-  .product-phone {
-    padding: 3px;
-    border-radius: 14px;
-  }
-  .product-phone .product-capture {
-    border-radius: 10px;
-  }
-  .window-dots {
-    gap: 3px;
-  }
-  .window-dots i {
-    width: 3px;
-    height: 3px;
-  }
-}
-
 .project-meta {
   display: flex;
   gap: 14px;
@@ -1027,8 +1029,7 @@ footer {
 .experience-toolbar {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 22px;
   z-index: 20;
   display: flex;
   align-items: center;
@@ -1045,11 +1046,18 @@ footer {
   font-size: 8px;
   letter-spacing: 0.1em;
   padding: 7px 10px;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
 }
 .quest-star {
   font-size: 22px;
   color: var(--accent);
   line-height: 1;
+}
+.quest-star .icon {
+  width: 20px;
+  height: 20px;
 }
 .quest-progress {
   height: 2px;
@@ -1495,7 +1503,7 @@ html[lang="ru"] .about h2 {
     height: 30px;
   }
   .brand-sub {
-    font-size: 6px;
+    font-size: 9px;
     letter-spacing: 0.13em;
   }
   .header nav {
@@ -1504,28 +1512,34 @@ html[lang="ru"] .about h2 {
   .header-tools {
     gap: 10px;
   }
+  .header select {
+    width: 96px;
+    min-height: 44px;
+  }
   .command-trigger {
-    font-size: 9px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 11px;
   }
   .hero {
-    min-height: 890px;
+    min-height: 820px;
     max-height: none;
     height: 100svh;
     padding: 105px 6% 28px;
   }
   .hero-eyebrow {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 0.05em;
   }
   .edition {
-    font-size: 6px;
+    font-size: 8px;
   }
   .hero-copy {
     padding-top: 33px;
     width: 100%;
   }
   .hero-copy .overline {
-    font-size: 8px;
+    font-size: 10px;
   }
   h1 {
     font-size: clamp(64px, 17vw, 102px);
@@ -1564,8 +1578,8 @@ html[lang="ru"] .about h2 {
     font-size: 9px;
   }
   .scene-wrap {
-    top: 43%;
-    height: 47%;
+    top: 45%;
+    height: 42%;
     width: 116%;
     right: -8%;
     z-index: 0;
@@ -1578,7 +1592,7 @@ html[lang="ru"] .about h2 {
     pointer-events: auto;
   }
   .scene-coordinate {
-    font-size: 6px;
+    font-size: 8px;
     gap: 10px;
   }
   .coord-top {
@@ -1586,29 +1600,32 @@ html[lang="ru"] .about h2 {
     right: 16%;
   }
   .scene-caption {
-    bottom: 0;
+    bottom: 2%;
     left: 21%;
     right: 15%;
-    font-size: 7px;
+    font-size: 10px;
   }
   .hero-bottom {
     left: 6%;
     right: 6%;
-    bottom: 28px;
+    bottom: 24px;
+    justify-content: center;
   }
   .scroll-link {
-    font-size: 6px;
-    gap: 7px;
+    display: none;
   }
   .scroll-track {
     width: 11px;
     height: 19px;
   }
   .mode-control {
-    gap: 16px;
+    gap: 24px;
+    transform: none;
   }
   .mode {
-    font-size: 7px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 10px;
   }
   .hero-grid {
     inset: 82px 6% 0;
@@ -1621,55 +1638,136 @@ html[lang="ru"] .about h2 {
     gap: 35px;
   }
   .section-pad {
-    padding: 74px 6%;
+    padding: 54px 5%;
+  }
+  .section-number {
+    font-size: 11px;
+    letter-spacing: 0.07em;
   }
   .section-heading {
     display: block;
-    margin-bottom: 42px;
+    margin-bottom: 28px;
+  }
+  .section-heading .section-number {
+    padding-top: 0;
   }
   .section-heading h2 {
     font-size: 39px;
-    margin-top: 25px;
+    margin-top: 16px;
   }
   .section-heading p {
-    max-width: 280px;
-    font-size: 12px;
-    margin-top: 20px;
+    max-width: 34ch;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 14px;
   }
   .project,
   .project:nth-child(even) {
     display: flex;
     flex-direction: column;
-    gap: 28px;
-    padding: 30px 0 40px;
+    gap: 14px;
+    padding: 24px 0 32px;
     align-items: stretch;
   }
-  .project:nth-child(even) .project-visual {
-    order: 0;
+  .project-copy {
+    display: contents;
   }
+  .project:nth-child(even) .project-visual,
   .project-visual {
+    order: 3;
     aspect-ratio: 3 / 2;
   }
+  .project-visual .visual-corner {
+    top: 12px;
+    left: 12px;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+  .project-product .visual-corner {
+    top: auto;
+    bottom: 12px;
+    padding: 5px 7px;
+    background: #0f1412e6;
+    border-radius: 2px;
+  }
+  .visual-open {
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+  }
+  .product-stage {
+    inset: 0;
+  }
+  .product-window {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+  }
+  .product-window-chrome {
+    display: none;
+  }
+  .product-window .product-capture {
+    height: 100%;
+    object-fit: contain;
+  }
+  .product-stage--phones {
+    inset: 6px 0;
+    gap: 9%;
+  }
+  .product-phone {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 430 / 932;
+    padding: 3px;
+    border-radius: 14px;
+    transform: none;
+  }
+  .product-phone .product-capture {
+    border-radius: 10px;
+  }
   .project-meta {
-    margin-bottom: 13px;
+    order: 0;
+    margin-bottom: 0;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
   }
   .project h3 {
+    order: 1;
     font-size: 35px;
+    margin: 0;
   }
   .project-description {
-    font-size: 12px;
-    margin: 16px 0;
+    order: 4;
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 2px 0;
     max-width: 100%;
   }
   .project-subtitle {
-    font-size: 11px;
+    order: 2;
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
   }
   .tags {
-    margin-bottom: 12px;
+    order: 5;
+    margin-bottom: 0;
+  }
+  .tags span {
+    font-size: 11px;
+    padding: 6px 8px;
   }
   .project-open {
+    order: 6;
     max-width: 100%;
-    font-size: 11px;
+    min-height: 44px;
+    font-size: 13px;
   }
   .open-source {
     display: block;
@@ -1683,7 +1781,8 @@ html[lang="ru"] .about h2 {
     font-size: 15px;
   }
   .open-source small {
-    font-size: 6px;
+    font-size: 9px;
+    letter-spacing: 0.03em;
   }
   .about-mark {
     font-size: 50px;
@@ -1763,26 +1862,48 @@ html[lang="ru"] .about h2 {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    padding: 26px 6% 100px;
-    font-size: 7px;
+    padding: 26px 6% max(32px, env(safe-area-inset-bottom));
+    font-size: 10px;
     gap: 24px;
   }
   footer .footer-brand {
     grid-row: span 2;
   }
   .experience-toolbar {
-    bottom: 15px;
-    white-space: nowrap;
+    position: static;
+    width: 90%;
+    margin: 0 5% 28px;
+    padding: 8px;
+    gap: 4px;
+    box-shadow: none;
+    backdrop-filter: none;
   }
   #quest-trigger {
-    font-size: 7px;
-    gap: 9px;
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 8px;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    gap: 8px;
   }
   .quest-progress {
-    width: 30px;
+    display: none;
+  }
+  .toolbar-divider {
+    height: 24px;
+    flex: none;
+    margin: 0 3px;
   }
   .experience-toolbar > button {
-    width: 27px;
+    flex: none;
+    width: 44px;
+    height: 44px;
+  }
+  #toast {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    padding: 10px 14px;
+    font-size: 12px;
   }
   .project-dialog,
   .quest-dialog {
@@ -1804,13 +1925,15 @@ html[lang="ru"] .about h2 {
     font-size: 12px;
   }
   html[lang="ru"] h1 {
-    font-size: clamp(56px, 15vw, 82px);
+    font-size: 54px;
+    line-height: 1.03;
   }
-  html[lang="ru"] h1 br:first-of-type {
+  html[lang="ru"] h1 > span,
+  html[lang="ru"] h1 > em {
     display: block;
   }
-  html[lang="ru"] h1 br:nth-of-type(2) {
-    display: none;
+  html[lang="ru"] h1 br {
+    display: none !important;
   }
   html[lang="ru"] .hero-description {
     font-size: 11px;
@@ -1893,77 +2016,6 @@ html[lang="ru"] .about h2 {
     background: white;
   }
 }
-/* The instrument controls and the persistent utility strip occupy separate edges. */
-.experience-toolbar {
-  left: auto;
-  right: 22px;
-  transform: none;
-}
-.experience-toolbar > button:not(#quest-trigger) {
-  width: 32px;
-  height: 32px;
-}
-#quest-trigger {
-  width: auto;
-  height: auto;
-  white-space: nowrap;
-}
-.hero-index {
-  visibility: hidden;
-}
-.scene-caption {
-  bottom: 5%;
-}
-.header select {
-  width: 96px;
-}
-@media (max-width: 720px) {
-  .experience-toolbar {
-    right: 12px;
-    bottom: 12px;
-  }
-  .hero-bottom {
-    bottom: 78px;
-  }
-  .hero {
-    min-height: 900px;
-  }
-  .scene-wrap {
-    height: 42%;
-    top: 45%;
-  }
-  .scene-caption {
-    bottom: -1%;
-  }
-  .header select {
-    width: 66px;
-  }
-  .experience-toolbar > button:not(#quest-trigger) {
-    width: 29px;
-  }
-}
-@media (max-width: 720px) {
-  html[lang="ru"] h1 {
-    font-size: 54px;
-    line-height: 1.03;
-  }
-  html[lang="ru"] h1 > span,
-  html[lang="ru"] h1 > em {
-    display: block;
-  }
-  html[lang="ru"] h1 br {
-    display: none !important;
-  }
-  .hero-bottom {
-    bottom: 70px;
-  }
-  .mode-control {
-    transform: translateY(-36px);
-  }
-  .scene-caption {
-    bottom: 2%;
-  }
-}
 .motion-paused .hero-copy > * {
   animation: none !important;
   opacity: 1;
@@ -1982,8 +2034,8 @@ html[lang="ru"] .about h2 {
   .header-tools {
     gap: 3px;
   }
-  .header select {
-    width: 57px;
+  .brand-sub {
+    display: none;
   }
   .contact-secondary {
     gap: 12px;

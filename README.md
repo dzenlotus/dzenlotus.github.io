@@ -19,6 +19,8 @@ npm run dev
 
 `npm run build` produces `dist/`. `npm run preview` serves the production build.
 
+`npm test` checks that interface marks use SVG rather than font symbols that iOS can turn into emoji. Mobile controls stay in document flow and do not cover project content.
+
 ## Publication
 
 Run `npm run deploy` to build and publish the static output to `gh-pages`. GitHub Pages serves that branch through its standard publishing mechanism. Source lives on `main`. This repository is a user site and uses Vite's default `/` base.

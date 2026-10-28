@@ -1,3 +1,4 @@
+import { icon, iconify } from "./icons.js";
 import "./style.css";
 
 const $ = (s, root = document) => root.querySelector(s);
@@ -273,7 +274,8 @@ const projects = [
     en: {
       imageAlt:
         "The spells screen from the Book of Shadow Mini App, captured locally with demo data.",
-      secondaryImageAlt: "The skills screen from the Book of Shadow Mini App, captured locally with demo data.",
+      secondaryImageAlt:
+        "The skills screen from the Book of Shadow Mini App, captured locally with demo data.",
       subtitle: "A spell book that lives in your chat.",
       description:
         "A Telegram game and companion Mini App that turn spells, rituals and progression into a shared interactive world.",
@@ -288,7 +290,8 @@ const projects = [
     ru: {
       imageAlt:
         "Экран заклинаний Mini App Book of Shadow, снятый локально с демонстрационными данными.",
-      secondaryImageAlt: "Экран развития Mini App Book of Shadow, снятый локально с демонстрационными данными.",
+      secondaryImageAlt:
+        "Экран развития Mini App Book of Shadow, снятый локально с демонстрационными данными.",
       subtitle: "Книга заклинаний, живущая в чате.",
       description:
         "Игра в Telegram и Mini App, объединяющие заклинания, ритуалы и развитие персонажей в общий интерактивный мир.",
@@ -384,12 +387,14 @@ function projectVisual(p) {
   return `<span class="product-stage"><span class="product-window product-window--${terminal ? "terminal" : "browser"}"><span class="product-window-chrome" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>${terminal ? "mudra" : "Worklife"}</span><span class="window-chrome-spacer"></span></span>${terminal ? capture("mudra-runtime.png", 1600, 1050, p[lang].imageAlt) : capture("worklife-jobs.webp", 1440, 1080, p[lang].imageAlt)}</span></span>`;
 }
 function renderProjects() {
-  $("#projects").innerHTML = projects
-    .map(
-      (p, i) =>
-        `<article class="project reveal" id="project-${p.id}"><button class="project-visual${p.id === "abyss" ? "" : ` project-product project-product--${p.id}`}" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}">${projectVisual(p)}<span class="visual-corner">${copy[lang][p.id === "abyss" ? "conceptStudy" : p.id === "mudra" ? "runtimeCapture" : "demoInterface"]} / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
-    )
-    .join("");
+  $("#projects").innerHTML = iconify(
+    projects
+      .map(
+        (p, i) =>
+          `<article class="project reveal" id="project-${p.id}"><button class="project-visual${p.id === "abyss" ? "" : ` project-product project-product--${p.id}`}" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}">${projectVisual(p)}<span class="visual-corner">${copy[lang][p.id === "abyss" ? "conceptStudy" : p.id === "mudra" ? "runtimeCapture" : "demoInterface"]} / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
+      )
+      .join(""),
+  );
   $$("[data-project]").forEach((el) =>
     el.addEventListener("click", () => openProject(el.dataset.project)),
   );
@@ -401,7 +406,7 @@ function setLanguage() {
   $("#language").value = lang;
   $$("[data-i18n]").forEach((el) => {
     const value = copy[lang][el.dataset.i18n];
-    if (value) el.innerHTML = value;
+    if (value) el.innerHTML = iconify(value);
   });
   $("#command-input").placeholder = copy[lang].commandPlaceholder;
   renderProjects();
@@ -463,17 +468,23 @@ function discover(key) {
   completed.add(key);
   renderQuests();
   tone(440 + completed.size * 80);
-  notify(`${copy[lang].noteFound} · ${completed.size}/${copy[lang].questNames.length}`);
+  notify(
+    `${copy[lang].noteFound} · ${completed.size}/${copy[lang].questNames.length}`,
+  );
 }
 function renderQuests() {
-  $("#quest-count").textContent = `${completed.size}/${copy[lang].questNames.length}`;
-  $(".quest-progress i").style.width = `${(completed.size / copy[lang].questNames.length) * 100}%`;
-  $("#quest-list").innerHTML = copy[lang].questNames
-    .map(
-      (q, i) =>
-        `<li class="${completed.has(i) ? "complete" : ""}"><span class="check">${completed.has(i) ? "✓" : "○"}</span><span>${q}</span></li>`,
-    )
-    .join("");
+  $("#quest-count").textContent =
+    `${completed.size}/${copy[lang].questNames.length}`;
+  $(".quest-progress i").style.width =
+    `${(completed.size / copy[lang].questNames.length) * 100}%`;
+  $("#quest-list").innerHTML = iconify(
+    copy[lang].questNames
+      .map(
+        (q, i) =>
+          `<li class="${completed.has(i) ? "complete" : ""}"><span class="check">${completed.has(i) ? "✓" : "○"}</span><span>${q}</span></li>`,
+      )
+      .join(""),
+  );
   $("#quest-reward").textContent =
     completed.size === copy[lang].questNames.length ? copy[lang].reward : "";
 }
@@ -481,8 +492,9 @@ let currentProject = "mudra";
 function renderProject(id) {
   const p = projects.find((p) => p.id === id);
   if (!p) return;
-  $("#project-detail").innerHTML =
-    `<span class="overline">${p.category}</span><h2 id="project-modal-title">${p.name}</h2><p class="detail-lead">${p[lang].lead}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><div class="detail-grid"><div><h3>${copy[lang].approach}</h3><p>${p[lang].focus}</p></div><div><h3>${copy[lang].contribution}</h3><p>${p[lang].contribution}</p></div></div><p class="detail-status">${p[lang].status}</p><div class="detail-links">${p.link ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer">${copy[lang].viewSource}</a>` : ""}${p.website ? `<a href="${p.website}" target="_blank" rel="noopener noreferrer">${copy[lang].visit}</a>` : ""}${p.preview ? `<a href="${p.preview}" target="_blank" rel="noopener noreferrer">${copy[lang].preview}</a>` : ""}<a href="mailto:i.kuriukin@icloud.com">${copy[lang].contactEmail}</a></div>`;
+  $("#project-detail").innerHTML = iconify(
+    `<span class="overline">${p.category}</span><h2 id="project-modal-title">${p.name}</h2><p class="detail-lead">${p[lang].lead}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><div class="detail-grid"><div><h3>${copy[lang].approach}</h3><p>${p[lang].focus}</p></div><div><h3>${copy[lang].contribution}</h3><p>${p[lang].contribution}</p></div></div><p class="detail-status">${p[lang].status}</p><div class="detail-links">${p.link ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer">${copy[lang].viewSource}</a>` : ""}${p.website ? `<a href="${p.website}" target="_blank" rel="noopener noreferrer">${copy[lang].visit}</a>` : ""}${p.preview ? `<a href="${p.preview}" target="_blank" rel="noopener noreferrer">${copy[lang].preview}</a>` : ""}<a href="mailto:i.kuriukin@icloud.com">${copy[lang].contactEmail}</a></div>`,
+  );
 }
 function openProject(id) {
   currentProject = id === "vajra" ? "mudra" : id;
@@ -542,7 +554,7 @@ function applyMotion() {
     paused ? "Resume animations" : "Pause animations",
   );
   $("#motion").title = paused ? "Resume animations" : "Pause animations";
-  $("#motion span").textContent = paused ? "▷" : "Ⅱ";
+  $("#motion span").innerHTML = icon(paused ? "play" : "pause");
   scene?.setPaused(paused);
   if (paused) {
     resetProjectDepths();
@@ -603,14 +615,16 @@ function renderCommands() {
   filteredCommands = commandEntries().filter((c) =>
     c.label.toLowerCase().includes(q),
   );
-  $("#command-results").innerHTML = filteredCommands.length
-    ? filteredCommands
-        .map(
-          (c, i) =>
-            `<button data-command="${i}"><span>${c.label}</span><small>${c.type} ↗</small></button>`,
-        )
-        .join("")
-    : `<p style="padding:15px;color:var(--muted);font-size:13px">${copy[lang].noResults}</p>`;
+  $("#command-results").innerHTML = iconify(
+    filteredCommands.length
+      ? filteredCommands
+          .map(
+            (c, i) =>
+              `<button data-command="${i}"><span>${c.label}</span><small>${c.type} ↗</small></button>`,
+          )
+          .join("")
+      : `<p style="padding:15px;color:var(--muted);font-size:13px">${copy[lang].noResults}</p>`,
+  );
   $$("[data-command]").forEach((b) =>
     b.addEventListener("click", () => {
       $("#command-dialog").close();
@@ -659,12 +673,16 @@ $(".hero-copy").insertAdjacentHTML(
 $(".hero-links").append($(".hero-copy .button"));
 $(".hero-links").insertAdjacentHTML(
   "beforeend",
-  '<a class="text-link" href="/profile.html" data-i18n="profile">Quick profile ↗</a>',
+  iconify(
+    '<a class="text-link" href="/profile.html" data-i18n="profile">Quick profile ↗</a>',
+  ),
 );
 $(".contact-link").href = "mailto:i.kuriukin@icloud.com";
 $(".contact-bottom").insertAdjacentHTML(
   "afterend",
-  '<div class="contact-secondary"><a href="mailto:i.kuriukin@icloud.com">i.kuriukin@icloud.com ↗</a><a href="https://github.com/dzenlotus" target="_blank" rel="noopener noreferrer">GitHub / dzenlotus ↗</a><a href="/profile.html" data-i18n="profile">Quick profile ↗</a></div>',
+  iconify(
+    '<div class="contact-secondary"><a href="mailto:i.kuriukin@icloud.com">i.kuriukin@icloud.com ↗</a><a href="https://github.com/dzenlotus" target="_blank" rel="noopener noreferrer">GitHub / dzenlotus ↗</a><a href="/profile.html" data-i18n="profile">Quick profile ↗</a></div>',
+  ),
 );
 $("#references-link").href = "/references.html";
 $("#world").removeAttribute("role");
