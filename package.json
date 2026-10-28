@@ -1,0 +1,20 @@
+{
+  "name": "ivan-kurukin-worlds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "dependencies": {
+    "@fontsource/space-grotesk": "^5.2.10",
+    "@fontsource/instrument-serif": "^5.2.8",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.12"
+  }
+}

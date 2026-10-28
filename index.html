@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#141613" />
+    <title>Ivan Kurukin — Building worlds, connecting intelligence</title>
+    <meta
+      name="description"
+      content="Ivan Kurukin builds AI agents, knowledge systems, interactive worlds and tools that turn ideas into working software. Explore his living portfolio."
+    />
+    <link rel="canonical" href="https://dzenlotus.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ivan Kurukin — Engineer of worlds" />
+    <meta
+      property="og:description"
+      content="AI systems. Playable worlds. A little controlled chaos. Enter an interactive portfolio by Ivan Kurukin."
+    />
+    <meta property="og:url" content="https://dzenlotus.github.io/" />
+    <meta property="og:image" content="https://dzenlotus.github.io/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to projects</a>
+    <header class="header">
+      <a class="brand" href="#home" aria-label="Ivan Kurukin home"
+        ><svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M6 20h28M20 6v28M10 10l20 20M30 10 10 30" />
+          <circle cx="20" cy="20" r="12" /></svg
+        ><span
+          >IVAN KURUKIN<span class="brand-sub">INDEPENDENT BUILDER</span></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#work" data-i18n="navWork">Selected work</a
+        ><a href="#about" data-i18n="navAbout">The human</a
+        ><a href="#contact" data-i18n="navContact">Connect <span>↗</span></a>
+      </nav>
+      <div class="header-tools">
+        <label class="sr-only" for="language">Language</label
+        ><select id="language">
+          <option value="en">EN · English</option>
+          <option value="ru">RU · Русский</option></select
+        ><button
+          class="command-trigger"
+          aria-label="Open command menu"
+          title="Command menu (⌘K)"
+        >
+          ⌘ K
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-eyebrow">
+          <span class="live-dot"></span
+          ><span data-i18n="eyebrow">SOMEWHERE BETWEEN LOGIC & MAGIC</span
+          ><span class="edition">PORTFOLIO / 2026</span>
+        </div>
+        <div class="hero-copy">
+          <p class="overline" data-i18n="heroRole">
+            AI SYSTEMS · CREATIVE ENGINEERING
+          </p>
+          <h1 id="hero-title">
+            <span data-i18n="heroLine1">I build</span><br /><em
+              data-i18n="heroLine2"
+              >living</em
+            ><br /><span class="outline" data-i18n="heroLine3">systems.</span>
+          </h1>
+          <p class="hero-description" data-i18n="heroDescription">
+            I'm Ivan. I turn complex ideas into agents, tools and worlds you can
+            actually step inside.
+          </p>
+          <a class="button primary magnetic" href="#work"
+            ><span data-i18n="explore">Explore my work</span
+            ><span class="button-arrow">↘</span></a
+          >
+        </div>
+        <div class="scene-wrap">
+          <div
+            id="world"
+            class="world"
+            role="img"
+            aria-label="Interactive 3D sculpture representing connected intelligence"
+          >
+            <div class="scene-fallback" aria-hidden="true">
+              <i></i><i></i><i></i><span>✳</span>
+            </div>
+          </div>
+          <div class="scene-coordinate coord-top">
+            <span>FIG. 001</span
+            ><span data-i18n="livingEngine">THE LIVING ENGINE</span>
+          </div>
+          <div class="object-label label-a">
+            <i></i><span>KNOWLEDGE</span><small>01 / VAJRA</small>
+          </div>
+          <div class="object-label label-b">
+            <i></i><span>IMAGINATION</span><small>02 / WORLDS</small>
+          </div>
+          <div class="scene-caption">
+            <span class="cross">+</span
+            ><span data-i18n="sceneHint"
+              >Drag to rotate · tap an orbiting signal</span
+            ><span class="cross">+</span>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <a href="#work" class="scroll-link"
+            ><span class="scroll-track"><i></i></span
+            ><span data-i18n="scroll">SCROLL TO DISCOVER</span></a
+          >
+          <div class="mode-control" role="group" aria-label="Sculpture mode">
+            <button
+              class="mode active"
+              data-mode="intelligence"
+              aria-pressed="true"
+              data-i18n="intelligence"
+            >
+              Intelligence</button
+            ><button
+              class="mode"
+              data-mode="magic"
+              aria-pressed="false"
+              data-i18n="magic"
+            >
+              Magic</button
+            ><button
+              class="mode"
+              data-mode="physics"
+              aria-pressed="false"
+              data-i18n="physics"
+            >
+              Physics
+            </button>
+          </div>
+          <span class="hero-index">01 — 05</span>
+        </div>
+      </section>
+      <div class="marquee" aria-hidden="true">
+        <div>
+          MAKE IT THINK <span>✳</span> MAKE IT WORK <span>✳</span> MAKE IT FEEL
+          <span>✳</span> MAKE IT THINK <span>✳</span> MAKE IT WORK
+          <span>✳</span> MAKE IT FEEL <span>✳</span>
+        </div>
+      </div>
+      <section class="work section-pad" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <span class="section-number">01 / SELECTED WORK</span>
+          <h2 id="work-title" data-i18n="workTitle">
+            Different worlds.<br />Same restless mind.
+          </h2>
+          <p data-i18n="workIntro">
+            From reasoning engines to spell books. I follow an idea all the way
+            into a working system.
+          </p>
+        </div>
+        <div class="projects" id="projects"></div>
+        <div class="open-source reveal">
+          <span class="overline" data-i18n="alsoBuild"
+            >ALSO ON MY WORKBENCH</span
+          ><a
+            href="https://github.com/dzenlotus/react-konva-layout"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span>react-konva-layout</span><small>REACT / TYPESCRIPT</small
+            ><span>↗</span></a
+          ><a
+            href="https://github.com/dzenlotus/promptery"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span>Promptery</span><small>MCP / DEVELOPER TOOLS</small
+            ><span>↗</span></a
+          ><a
+            href="https://github.com/dzenlotus/lirica"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span>Lirica</span><small>POETRY / LANGUAGE TOOLS</small
+            ><span>↗</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="about section-pad"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="about-top">
+          <span class="section-number reveal">02 / THE HUMAN IN THE LOOP</span
+          ><span class="about-mark" aria-hidden="true">✳</span>
+        </div>
+        <div class="about-body">
+          <h2 class="reveal" id="about-title" data-i18n="aboutTitle">
+            An engineer's mind.<br />A worldbuilder's<br /><em>curiosity.</em>
+          </h2>
+          <div class="about-text reveal">
+            <p class="about-lead" data-i18n="aboutLead">
+              I like the moment an abstract idea starts doing something real.
+            </p>
+            <p data-i18n="aboutText">
+              My work lives where AI, software engineering and interactive
+              design overlap. I build tools that remember, agents that act, and
+              worlds with rules worth exploring.
+            </p>
+            <p data-i18n="aboutText2">
+              I work from the system underneath to the experience on the
+              surface. Then I run it, question it, and make it better.
+            </p>
+            <div class="stack">
+              <span>Python</span><span>Rust</span><span>TypeScript</span
+              ><span>MCP</span><span>React</span><span>Godot</span>
+            </div>
+            <div class="signature">Ivan Kurukin <span>↙</span></div>
+          </div>
+        </div>
+        <div class="principles reveal">
+          <div>
+            <span>01</span>
+            <p data-i18n="principle1">
+              Ideas need<br /><strong>working proof.</strong>
+            </p>
+          </div>
+          <div>
+            <span>02</span>
+            <p data-i18n="principle2">
+              Complex systems.<br /><strong>Clear interfaces.</strong>
+            </p>
+          </div>
+          <div>
+            <span>03</span>
+            <p data-i18n="principle3">
+              Stay curious.<br /><strong>Keep building.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="lab section-pad" id="lab" aria-labelledby="lab-title">
+        <div class="lab-heading reveal">
+          <span class="section-number">03 / A SMALL EXPERIMENT</span>
+          <h2 id="lab-title" data-i18n="labTitle">
+            A little controlled<br /><em>chaos.</em>
+          </h2>
+          <p data-i18n="labIntro">
+            Good systems invite you to play. Pilot a probe, collect three
+            signals, and try not to get lost in orbit.
+          </p>
+        </div>
+        <div class="lab-instrument reveal">
+          <div class="instrument-top">
+            <span><i class="live-dot"></i> GRAVITY SANDBOX</span
+            ><span id="lab-score">SIGNALS 0 / 3</span>
+          </div>
+          <canvas
+            id="gravity"
+            width="900"
+            height="420"
+            aria-label="Gravity sandbox: steer a probe with arrow keys or the four direction buttons to collect three signals"
+          ></canvas>
+          <div class="lab-start" id="lab-start">
+            <span class="orbit-symbol" aria-hidden="true">◎</span
+            ><button class="button primary" id="launch">
+              <span data-i18n="launch">Launch a probe</span><span>↗</span>
+            </button>
+          </div>
+          <div class="instrument-bottom">
+            <span data-i18n="labControls"
+              >ARROW KEYS / WASD · COLLECT 3 SIGNALS</span
+            ><button id="reset-lab" data-i18n="reset">Reset ↺</button>
+          </div>
+          <div class="touch-controls" role="group" aria-label="Probe direction">
+            <button data-direction="left" aria-label="Steer left">←</button
+            ><button data-direction="up" aria-label="Steer up">↑</button
+            ><button data-direction="down" aria-label="Steer down">↓</button
+            ><button data-direction="right" aria-label="Steer right">→</button>
+          </div>
+        </div>
+      </section>
+      <section class="agent-section section-pad reveal">
+        <div class="agent-icon" aria-hidden="true">✳</div>
+        <div>
+          <span class="overline" data-i18n="agentEyebrow"
+            >A NOTE FROM THE OTHER SIDE OF THE KEYBOARD</span
+          >
+          <p data-i18n="agentNote">
+            “Ivan doesn't stop at ‘what if’. He asks what it would take, builds
+            it, and makes me prove it works. This little universe is how I see
+            that mind.”
+          </p>
+          <span class="agent-sign" data-i18n="agentSign"
+            >— His AI collaborator · built together, questioned
+            constantly.</span
+          >
+        </div>
+      </section>
+      <section
+        class="contact section-pad"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <span class="section-number reveal">04 / NEXT CHAPTER</span>
+        <h2 class="reveal" id="contact-title" data-i18n="contactTitle">
+          Have a strange<br />and <em>ambitious</em> idea?
+        </h2>
+        <div class="contact-bottom reveal">
+          <p data-i18n="contactText">
+            Interesting systems start with a conversation.<br />Find my work.
+            Start one.
+          </p>
+          <a
+            class="contact-link magnetic"
+            href="https://github.com/dzenlotus"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="contactButton">Let's build something</span
+            ><span>↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-brand" href="#home">IK<span>✳</span></a
+      ><span>© 2026 IVAN KURUKIN</span
+      ><a
+        href="https://github.com/dzenlotus/dzenlotus.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="source"
+        >Explore the source ↗</a
+      ><a href="/docs/references" id="references-link" data-i18n="references"
+        >10 inspirations ↗</a
+      ><span data-i18n="footerNote"
+        >HUMAN CURIOSITY. MACHINE COLLABORATION.</span
+      >
+    </footer>
+    <div class="experience-toolbar">
+      <button id="quest-trigger" aria-label="Open exploration progress">
+        <span class="quest-star">✳</span
+        ><span data-i18n="explorer">EXPLORER</span
+        ><span id="quest-count">0/5</span
+        ><span class="quest-progress"><i></i></span></button
+      ><span class="toolbar-divider"></span
+      ><button
+        id="sound"
+        aria-pressed="false"
+        aria-label="Enable interaction sounds"
+        title="Sound off"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9v6h4l5 4V5L8 9H4m13-1v8m3-11v14" />
+        </svg></button
+      ><button
+        id="motion"
+        aria-pressed="false"
+        aria-label="Pause animations"
+        title="Pause animations"
+      >
+        <span>Ⅱ</span>
+      </button>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog
+      id="project-dialog"
+      class="project-dialog"
+      aria-labelledby="project-modal-title"
+    >
+      <button class="dialog-close" aria-label="Close project">×</button>
+      <div id="project-detail"></div>
+    </dialog>
+    <dialog
+      id="quest-dialog"
+      class="quest-dialog"
+      aria-labelledby="quest-modal-title"
+    >
+      <button class="dialog-close" aria-label="Close exploration progress">
+        ×</button
+      ><span class="overline" data-i18n="questLabel">YOUR FIELD NOTES</span>
+      <h2 id="quest-modal-title" data-i18n="questTitle">Stay curious.</h2>
+      <p data-i18n="questIntro">
+        Five small discoveries. Everything is open from the start.
+      </p>
+      <ol id="quest-list"></ol>
+      <div class="quest-reward" id="quest-reward"></div>
+    </dialog>
+    <dialog
+      id="command-dialog"
+      class="command-dialog"
+      aria-label="Find a project or section"
+    >
+      <label class="sr-only" for="command-input"
+        >Find a project or section</label
+      >
+      <div class="command-input-wrap">
+        <span>⌕</span
+        ><input
+          id="command-input"
+          placeholder="Find a project or jump somewhere…"
+          autocomplete="off"
+        /><button class="dialog-close" aria-label="Close command menu">
+          ESC
+        </button>
+      </div>
+      <div id="command-results"></div>
+      <small>↑ ↓ NAVIGATE &nbsp; ↵ OPEN &nbsp; ESC CLOSE</small>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

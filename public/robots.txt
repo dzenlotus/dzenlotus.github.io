@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dzenlotus.github.io/sitemap.xml
