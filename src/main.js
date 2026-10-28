@@ -21,6 +21,7 @@ const storage = {
 let lang = storage.get("ik-language") === "ru" ? "ru" : "en";
 let scene;
 const preference = matchMedia("(prefers-reduced-motion: reduce)");
+const projectPointer = matchMedia("(hover: hover) and (pointer: fine)");
 let paused = preference.matches;
 let soundEnabled = false;
 let audio;
@@ -83,6 +84,7 @@ const copy = {
     questIntro:
       "Five ways to explore the work. No locked content, no scores — just things worth trying.",
     readCase: "Explore the project",
+    conceptStudy: "CONCEPT STUDY",
     approach: "ENGINEERING FOCUS",
     contribution: "MY CONTRIBUTION",
     viewSource: "Public repository ↗",
@@ -172,6 +174,7 @@ const copy = {
     questIntro:
       "Пять способов познакомиться с работой. Всё доступно сразу: просто несколько вещей, которые стоит попробовать.",
     readCase: "Подробнее о проекте",
+    conceptStudy: "КОНЦЕПТ",
     approach: "ИНЖЕНЕРНЫЙ ФОКУС",
     contribution: "МОЙ ВКЛАД",
     viewSource: "Открытый репозиторий ↗",
@@ -214,8 +217,9 @@ const projects = [
     tags: ["Python", "Rust", "MCP", "Knowledge graphs"],
     link: "https://github.com/dzenlotus/mudra",
     preview: "https://github.com/dzenlotus/mudra/releases",
-    visual: "graph",
     en: {
+      imageAlt:
+        "A precision engine with titanium rings around a smoky quartz core and a luminous branching lattice.",
       subtitle: "Intelligence with a memory.",
       description:
         "An agent harness and knowledge-engine ecosystem exploring how software can formalize goals, keep reusable knowledge and execute procedures.",
@@ -228,6 +232,8 @@ const projects = [
         "Active development. Mudra has a public macOS Apple Silicon preview; the public repository distributes builds. Core implementation is private.",
     },
     ru: {
+      imageAlt:
+        "Точный механизм: титановые кольца вокруг ядра из дымчатого кварца со светящейся разветвлённой структурой.",
       subtitle: "Интеллект с памятью.",
       description:
         "Агентная среда и экосистема движка знаний: формализация целей, накопление пригодного для повторного использования опыта и выполнение процедур.",
@@ -247,8 +253,9 @@ const projects = [
     tags: ["Python", "MCP", "SQLite", "Agent workflows"],
     link: "https://github.com/dzenlotus/worklife-agent",
     website: "https://dzenlotus.github.io/worklife-agent/",
-    visual: "terminal",
     en: {
+      imageAlt:
+        "Branching architectural walkways and frosted glass portals, connected by a single chartreuse route in a dark gallery.",
       subtitle: "A career workspace for personal agents.",
       description:
         "An MCP server for job search, resume matching, application tracking and shared employer knowledge. Personal search context stays local.",
@@ -261,6 +268,8 @@ const projects = [
         "Public source, documentation and installable Python package. Provider access and capabilities depend on configuration.",
     },
     ru: {
+      imageAlt:
+        "Разветвлённые переходы и порталы из матового стекла; один салатовый маршрут проходит через тёмную галерею.",
       subtitle: "Карьерное пространство для личных агентов.",
       description:
         "MCP-сервер для поиска вакансий, сопоставления резюме, ведения откликов и обмена знаниями о работодателях. Личный контекст остаётся локально.",
@@ -278,8 +287,9 @@ const projects = [
     name: "Book of Shadow",
     category: "INTERACTIVE PRODUCT",
     tags: ["Python", "Next.js", "React", "Telegram"],
-    visual: "sigil",
     en: {
+      imageAlt:
+        "A dark leather grimoire with brass fittings, open parchment pages and a floating geometric seal.",
       subtitle: "A spell book that lives in your chat.",
       description:
         "A Telegram game and companion Mini App that turn spells, rituals and progression into a shared interactive world.",
@@ -292,6 +302,8 @@ const projects = [
         "A continuing product with a private codebase. This overview describes engineering scope; no public demo is linked.",
     },
     ru: {
+      imageAlt:
+        "Гримуар в тёмной кожаной обложке с латунными деталями, раскрытым пергаментом и парящей геометрической печатью.",
       subtitle: "Книга заклинаний, живущая в чате.",
       description:
         "Игра в Telegram и Mini App, объединяющие заклинания, ритуалы и развитие персонажей в общий интерактивный мир.",
@@ -309,8 +321,9 @@ const projects = [
     name: "Abyss Wars",
     category: "SIMULATION & GAME SYSTEMS",
     tags: ["Godot", "GDScript", "Rust", "Simulation"],
-    visual: "ship",
     en: {
+      imageAlt:
+        "A detailed spacecraft with articulated engines and pale chartreuse exhaust in dark space.",
       subtitle: "Worlds built from first principles.",
       description:
         "A space-flight prototype exploring modular propulsion, ship systems and programmable onboard procedures.",
@@ -323,6 +336,8 @@ const projects = [
         "Experimental Godot prototype in active development. Some mechanics are design studies; no public playable build is linked.",
     },
     ru: {
+      imageAlt:
+        "Детализированный космический корабль с поворотными двигателями и бледно-салатовым выхлопом в тёмном космосе.",
       subtitle: "Миры из первых принципов.",
       description:
         "Прототип космической игры: модульная тяга, системы корабля и программируемые процедуры бортового компьютера.",
@@ -336,76 +351,54 @@ const projects = [
     },
   },
 ];
-function visual(type) {
-  const grid =
-    '<defs><pattern id="grid-' +
-    type +
-    '" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#9bad7c" stroke-opacity=".08"/></pattern><radialGradient id="glow-' +
-    type +
-    '"><stop stop-color="#91b556" stop-opacity=".22"/><stop offset="1" stop-color="#91b556" stop-opacity="0"/></radialGradient></defs><rect width="600" height="440" fill="#1d2319"/><rect width="600" height="440" fill="url(#grid-' +
-    type +
-    ')"/><ellipse cx="300" cy="220" rx="260" ry="200" fill="url(#glow-' +
-    type +
-    ')"/>';
-  let art = "";
-  if (type === "graph") {
-    const nodes = [
-      [300, 215],
-      [190, 125],
-      [395, 105],
-      [465, 240],
-      [365, 335],
-      [190, 320],
-      [115, 225],
-      [285, 70],
-      [490, 145],
-      [450, 355],
-      [90, 125],
-    ];
-    art =
-      nodes
-        .slice(1)
-        .map(
-          (n, i) =>
-            `<path d="M300 215L${n[0]} ${n[1]}" stroke="#9db672" stroke-opacity=".3"/><path d="M${n[0]} ${n[1]}L${nodes[(i + 2) % nodes.length][0]} ${nodes[(i + 2) % nodes.length][1]}" stroke="#9db672" stroke-opacity=".15"/>`,
-        )
-        .join("") +
-      nodes
-        .map(
-          (n, i) =>
-            `<g transform="translate(${n[0]},${n[1]})"><circle r="${i ? 9 : 37}" fill="#26331c" stroke="${i ? "#7f9a59" : "#d7ff75"}" stroke-width="${i ? 1 : 1.5}"/><circle r="${i ? 3 : 8}" fill="#d7ff75"/>${i ? "" : '<circle r="50" fill="none" stroke="#d7ff75" stroke-opacity=".3" stroke-dasharray="2 5"/>'}</g>`,
-        )
-        .join("") +
-      '<text x="300" y="396" text-anchor="middle" fill="#a1b38c" font-size="9" letter-spacing="4">INTENT → KNOWLEDGE → ACTION</text>';
-  }
-  if (type === "terminal")
-    art =
-      '<g transform="translate(72 75)"><rect width="456" height="295" rx="4" fill="#141b10" stroke="#596d40"/><path d="M0 34H456" stroke="#3b4e2a"/><circle cx="17" cy="17" r="3" fill="#d7ff75"/><circle cx="29" cy="17" r="3" fill="#6c8057"/><circle cx="41" cy="17" r="3" fill="#3d5030"/><g font-family="monospace" font-size="11"><text x="22" y="72" fill="#8f9e7e">~/worklife</text><text x="22" y="105" fill="#d7ff75">❯ agent.connect()</text><text x="22" y="143" fill="#e1e8d7">Personal context</text><text x="345" y="143" fill="#d7ff75">LOCAL</text><path d="M22 158H434" stroke="#334628"/><text x="22" y="184" fill="#e1e8d7">Employer knowledge</text><text x="345" y="184" fill="#95af73">SHARED</text><path d="M22 199H434" stroke="#334628"/><text x="22" y="234" fill="#8f9e7e">search → match → track</text><rect x="22" y="255" width="8" height="12" fill="#d7ff75"/></g></g>';
-  if (type === "sigil") {
-    art =
-      '<g transform="translate(300 220)" fill="none" stroke="#b8c297"><circle r="150" stroke-opacity=".45"/><circle r="140" stroke-opacity=".2"/><circle r="111" stroke-opacity=".7"/><circle r="57" stroke-opacity=".4"/><path d="M0-110 95 55H-95Z M0 110 95-55H-95Z" stroke-opacity=".5"/><path d="M0-150V150M-150 0H150" stroke-opacity=".2"/>' +
-      Array.from(
-        { length: 24 },
-        (_, i) =>
-          `<path transform="rotate(${i * 15})" d="M0-128v${i % 3 ? 5 : 12}" stroke-opacity=".6"/>`,
-      ).join("") +
-      '<path d="M-20 0C-20-30 25-30 25 0S-20 30-20 0M0-45V45" stroke="#d7ff75" stroke-width="1.5"/><circle r="4" fill="#d7ff75"/></g><text x="300" y="409" text-anchor="middle" fill="#a9b58f" font-size="8" letter-spacing="5">THE BOOK OF SHADOW</text>';
-  }
-  if (type === "ship")
-    art =
-      '<g fill="none" stroke="#b6c69a"><ellipse cx="300" cy="238" rx="240" ry="90" stroke-opacity=".17"/><ellipse cx="300" cy="238" rx="190" ry="63" stroke-opacity=".17"/><path d="m300 80 58 118 89 49-17 38-79-14-51 60-51-60-79 14-17-38 89-49Z" fill="#2b3523" stroke-opacity=".7"/><path d="m300 113 28 89-28 94-28-94Z" fill="#465a30"/><path d="m242 198 58 33 58-33M249 271l51-40 51 40M272 202l-80 49 57 20M328 202l80 49-57 20" stroke-opacity=".4"/><path d="m193 274-10 33m226-33 10 33M278 313l-7 39m51-39 7 39" stroke="#d7ff75" stroke-width="3"/><path d="M300 80V45m0 286v47M153 247H90m357 0h63" stroke-opacity=".25" stroke-dasharray="3 5"/><circle cx="300" cy="231" r="7" stroke="#d7ff75"/><path d="M300 224v14m-7-7h14" stroke="#d7ff75"/></g><text x="300" y="410" text-anchor="middle" fill="#9aaa85" font-size="9" letter-spacing="3">MASS · ENERGY · IMPULSE</text>';
-  return `<svg viewBox="0 0 600 440" aria-hidden="true">${grid}${art}</svg>`;
+function resetProjectDepth(el) {
+  el.style.removeProperty("--pointer-x");
+  el.style.removeProperty("--pointer-y");
+}
+function resetProjectDepths() {
+  $$(".project-visual").forEach(resetProjectDepth);
+}
+projectPointer.addEventListener("change", resetProjectDepths);
+function bindProjectDepth() {
+  $$(".project-visual").forEach((el) => {
+    let bounds;
+    el.addEventListener("pointerenter", () => {
+      bounds = el.getBoundingClientRect();
+    });
+    el.addEventListener("pointermove", (event) => {
+      if (
+        paused ||
+        preference.matches ||
+        !projectPointer.matches ||
+        event.pointerType === "touch"
+      )
+        return;
+      const x = Math.max(
+        -1,
+        Math.min(1, ((event.clientX - bounds.left) / bounds.width - 0.5) * 2),
+      );
+      const y = Math.max(
+        -1,
+        Math.min(1, ((event.clientY - bounds.top) / bounds.height - 0.5) * 2),
+      );
+      el.style.setProperty("--pointer-x", x.toFixed(3));
+      el.style.setProperty("--pointer-y", y.toFixed(3));
+    });
+    el.addEventListener("pointerleave", () => resetProjectDepth(el));
+    el.addEventListener("pointercancel", () => resetProjectDepth(el));
+  });
 }
 function renderProjects() {
   $("#projects").innerHTML = projects
     .map(
       (p, i) =>
-        `<article class="project reveal" id="project-${p.id}"><button class="project-visual" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}">${visual(p.visual)}<span class="visual-corner">STUDY / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
+        `<article class="project reveal" id="project-${p.id}"><button class="project-visual" data-project="${p.id}" aria-label="${copy[lang].readCase}: ${p.name}"><img class="project-image" src="/images/${p.id}.webp" width="1536" height="1024" alt="${p[lang].imageAlt}" loading="lazy" decoding="async" draggable="false"><span class="visual-corner">${copy[lang].conceptStudy} / 00${i + 1}</span><span class="visual-open" aria-hidden="true">↗</span></button><div class="project-copy"><div class="project-meta"><span class="project-num">0${i + 1}</span><span>${p.category}</span></div><h3>${p.name}</h3><span class="project-subtitle">${p[lang].subtitle}</span><p class="project-description">${p[lang].description}</p><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="project-open" data-project="${p.id}"><span>${copy[lang].readCase}</span><span aria-hidden="true">↗</span></button></div></article>`,
     )
     .join("");
   $$("[data-project]").forEach((el) =>
     el.addEventListener("click", () => openProject(el.dataset.project)),
   );
+  bindProjectDepth();
   observeReveals();
 }
 function setLanguage() {
@@ -557,7 +550,10 @@ function applyMotion() {
   $("#motion").title = paused ? "Resume animations" : "Pause animations";
   $("#motion span").textContent = paused ? "▷" : "Ⅱ";
   scene?.setPaused(paused);
-  if (paused) $$(".reveal").forEach((el) => el.classList.add("visible"));
+  if (paused) {
+    resetProjectDepths();
+    $$(".reveal").forEach((el) => el.classList.add("visible"));
+  }
   if (!paused && labRunning) startLabLoop();
 }
 $("#motion").addEventListener("click", () => {
