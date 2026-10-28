@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Professional profile of Ivan Kurukin — AI Systems & Full-stack Engineer."
+    />
+    <title>Ivan Kurukin — Professional profile</title>
+    <link rel="icon" href="/favicon.svg" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font:
+          15px/1.7 system-ui,
+          sans-serif;
+        color: #26301f;
+        background: #e9ecdf;
+        margin: 0;
+      }
+      main {
+        max-width: 860px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 60px;
+      }
+      a {
+        color: #3d601e;
+        text-underline-offset: 4px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -0.06em;
+        margin: 0 0 12px;
+      }
+      h2 {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 40px 0 20px;
+        border-top: 1px solid #cdd4c5;
+        padding-top: 20px;
+      }
+      h3 {
+        font-size: 17px;
+        margin: 25px 0 3px;
+      }
+      p {
+        margin: 8px 0;
+      }
+      .role {
+        font-size: 20px;
+      }
+      .muted {
+        color: #626e57;
+      }
+      .links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 13px;
+      }
+      .stack {
+        font-size: 14px;
+      }
+      .project p {
+        font-size: 14px;
+      }
+      .project small {
+        color: #68745c;
+      }
+      .print {
+        border: 0;
+        background: #26301f;
+        color: white;
+        padding: 9px 15px;
+        cursor: pointer;
+      }
+      .ru {
+        display: none;
+      }
+      html[lang="ru"] .en {
+        display: none;
+      }
+      html[lang="ru"] .ru {
+        display: block;
+      }
+      select {
+        border: 1px solid #9ba98a;
+        padding: 7px;
+        background: white;
+        color: #26301f;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 11px;
+        color: #68745c;
+      }
+      @media (max-width: 700px) {
+        main {
+          margin: 0;
+          padding: 30px 24px;
+        }
+        h1 {
+          font-size: 38px;
+        }
+        .role {
+          font-size: 17px;
+        }
+        nav {
+          margin-bottom: 35px;
+          gap: 15px;
+          flex-wrap: wrap;
+        }
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        main {
+          padding: 0;
+          margin: 0;
+          max-width: none;
+        }
+        nav,
+        .print {
+          display: none;
+        }
+        h1 {
+          font-size: 34px;
+        }
+        h2 {
+          margin-top: 20px;
+          padding-top: 12px;
+        }
+        h3 {
+          margin-top: 13px;
+          font-size: 15px;
+        }
+        body,
+        .project p {
+          font-size: 12px;
+        }
+        small {
+          font-size: 10px;
+        }
+        footer {
+          margin-top: 20px;
+        }
+        a {
+          color: #26301f;
+          text-decoration: none;
+        }
+        .project {
+          break-inside: avoid;
+        }
+        @page {
+          margin: 18mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="/">← Interactive portfolio</a
+        ><label
+          >Language
+          <select id="lang">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </select></label
+        ><button class="print" onclick="print()">Print / Save PDF</button>
+      </nav>
+      <h1>Ivan Kurukin</h1>
+      <p class="role">AI Systems & Full-stack Engineer</p>
+      <div class="en">
+        <p class="muted">
+          I build AI agents, developer tools and interactive products,
+          connecting architecture, implementation and the user experience.
+        </p>
+      </div>
+      <div class="ru">
+        <p class="muted">
+          Иван Курукин. Создаю AI-агентов, инструменты для разработчиков и
+          интерактивные продукты — от архитектуры до интерфейса.
+        </p>
+      </div>
+      <div class="links">
+        <a href="mailto:i.kuriukin@icloud.com">i.kuriukin@icloud.com</a
+        ><a href="https://github.com/dzenlotus">github.com/dzenlotus</a
+        ><a href="https://dzenlotus.github.io/">dzenlotus.github.io</a>
+      </div>
+      <h2 class="en">Engineering focus</h2>
+      <h2 class="ru">Инженерный фокус</h2>
+      <p class="en">
+        Agent tooling and MCP · Knowledge systems and persistent context ·
+        Full-stack product development · Interactive interfaces and simulation
+      </p>
+      <p class="ru">
+        Инструменты агентов и MCP · Системы знаний и долговременный контекст ·
+        Full-stack разработка продуктов · Интерактивные интерфейсы и симуляция
+      </p>
+      <p class="stack">
+        <strong>Tools:</strong> Python · Rust · TypeScript · React · Next.js ·
+        SQLite · PostgreSQL · Godot · Git
+      </p>
+      <h2 class="en">Selected projects & contribution</h2>
+      <h2 class="ru">Избранные проекты и мой вклад</h2>
+      <div class="project">
+        <h3>
+          Worklife <a href="https://github.com/dzenlotus/worklife-agent">↗</a>
+        </h3>
+        <p class="en">
+          Product design and Python/MCP implementation for job search, resume
+          matching, application tracking and shared employer knowledge. Personal
+          search context stays local.
+        </p>
+        <p class="ru">
+          Продуктовое проектирование и реализация Python/MCP-сервера для поиска
+          вакансий, сопоставления резюме, ведения откликов и обмена знаниями о
+          работодателях. Личный контекст остаётся локально.
+        </p>
+        <small>Python / MCP / SQLite · Public source & package</small>
+      </div>
+      <div class="project">
+        <h3>
+          Mudra / Vajra / Ghanta
+          <a href="https://github.com/dzenlotus/mudra">↗</a>
+        </h3>
+        <p class="en">
+          Architecture and implementation of an agent-tooling and
+          knowledge-engine ecosystem: formalizing goals, persisting reusable
+          knowledge and executing inspectable procedures.
+        </p>
+        <p class="ru">
+          Архитектура и разработка экосистемы инструментов агентов и движка
+          знаний: формализация целей, накопление знаний для повторного
+          использования и выполнение проверяемых процедур.
+        </p>
+        <small
+          >Python / Rust / MCP · Active development; public Mudra preview,
+          private core</small
+        >
+      </div>
+      <div class="project">
+        <h3>
+          react-konva-layout
+          <a href="https://github.com/dzenlotus/react-konva-layout">↗</a>
+        </h3>
+        <p class="en">
+          A TypeScript library bringing browser-native Flex and Grid measurement
+          to React Konva through a layout tree, canvas groups and a debug
+          overlay.
+        </p>
+        <p class="ru">
+          Библиотека TypeScript, использующая браузерный Flex и Grid для
+          компоновки React Konva: дерево разметки, группы canvas и отладочный
+          слой.
+        </p>
+        <small>TypeScript / React / Konva · Public source</small>
+      </div>
+      <div class="project">
+        <h3>Book of Shadow</h3>
+        <p class="en">
+          Backend game mechanics, Telegram workflows and a multilingual
+          companion Mini App for a persistent social game built around spells,
+          rituals and progression.
+        </p>
+        <p class="ru">
+          Серверные игровые механики, Telegram-сценарии и многоязычный Mini App
+          для постоянной социальной игры с заклинаниями, ритуалами и
+          прогрессией.
+        </p>
+        <small>Python / React / Next.js / Telegram · Private codebase</small>
+      </div>
+      <h2 class="en">Collaboration</h2>
+      <h2 class="ru">Сотрудничество</h2>
+      <p class="en">
+        Open to engineering roles and project collaborations involving AI
+        systems, developer tools and interactive products.
+        <a href="mailto:i.kuriukin@icloud.com">Start a conversation ↗</a>
+      </p>
+      <p class="ru">
+        Рассматриваю инженерные роли и проектное сотрудничество в области
+        AI-систем, инструментов разработки и интерактивных продуктов.
+        <a href="mailto:i.kuriukin@icloud.com">Написать ↗</a>
+      </p>
+      <footer class="en">
+        Project-based profile. Project status and public links checked in
+        October 2026. This page is designed to print or save as PDF.
+      </footer>
+      <footer class="ru">
+        Проектный профиль. Статусы и публичные ссылки проверены в октябре 2026.
+        Страницу можно распечатать или сохранить в PDF.
+      </footer>
+    </main>
+    <script>
+      const s = document.getElementById("lang");
+      s.value = localStorage.getItem("ik-language") === "ru" ? "ru" : "en";
+      document.documentElement.lang = s.value;
+      s.onchange = () => {
+        document.documentElement.lang = s.value;
+        try {
+          localStorage.setItem("ik-language", s.value);
+        } catch {}
+      };
+    </script>
+  </body>
+</html>
